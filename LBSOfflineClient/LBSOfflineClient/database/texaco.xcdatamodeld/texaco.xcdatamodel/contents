@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Areas" representedClassName="Areas" syncable="YES">
+        <attribute name="altitude" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Beacons" representedClassName="Beacons" syncable="YES">
+        <attribute name="areaId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="enterThres" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="farThres" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="floorSwitch" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mac" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="major" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="psudoLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relatedPolygon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relatedRegion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thresDiff" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Pois" representedClassName="Pois" syncable="YES">
+        <attribute name="areaId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="svg_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vertex" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Areas" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Beacons" positionX="-54" positionY="-9" width="128" height="270"/>
+        <element name="Pois" positionX="-54" positionY="99" width="128" height="120"/>
+    </elements>
+</model>
