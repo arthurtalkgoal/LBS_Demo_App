@@ -171,6 +171,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-t0-6ga">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="back"/>
                                                 <connections>
                                                     <action selector="backButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TfJ-jC-OBd"/>
                                                 </connections>
@@ -256,6 +257,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="locButton" destination="x7Z-Fb-Gxj" id="0Ye-C6-iVf"/>
                         <outlet property="newback" destination="eNu-3w-42F" id="XD7-Wr-QeM"/>
                     </connections>
                 </viewController>

@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) id <DBHandlerDelegate> delegate;
 
 + (DBHandler *)instance;
-- (void)startLoadWithSiteName:(NSString *)siteName;
+- (void)startLoadWithSiteName:(NSString *)siteName andPath:(NSString *)site_Path;
 
 - (NSArray *)fetchAllObjectsForEntity:(NSString *)entityName orderedBy:(nullable NSString *)orderProperty ascending:(BOOL)ascending;
 - (NSArray *)fetchObjectsForEntity:(NSString *)entityName AtKey:(NSString *)key withValue:(NSString *)value orderedBy:(nullable NSString *)orderProperty ascending:(BOOL)ascending;

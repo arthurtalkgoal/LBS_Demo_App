@@ -43,6 +43,7 @@ static CGFloat mDefaultStartScale = 0.5;
 }
 
 @property (strong, nonatomic) IBOutlet UIView *newback;
+@property (strong, nonatomic) IBOutlet UIButton *locButton;
 @property (strong, nonatomic) MCView *backView;
 
 @property (strong, nonatomic) AVAudioPlayer *background_player;
@@ -62,7 +63,6 @@ static CGFloat mDefaultStartScale = 0.5;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self postLogin];
 }
 
@@ -166,100 +166,105 @@ static CGFloat mDefaultStartScale = 0.5;
 
 #pragma mark - Network Handler
 - (void)postLogin {
+    self.locButton.enabled = NO;
+    [DBHandler instance];
+    [[DBHandler instance] setDelegate:self];
+    [[DBHandler instance] startLoadWithSiteName:@"texaco" andPath: [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]];
+}
+
+- (void)postReception:(Position *)point upload:(BOOL)uploadToServer {
+    if (point && self.backView.navigating) {
+        [self.backView moveto:point.location areaId:point.areaId];
+    }
+
+    if (uploadToServer) {
+
+        NSString *area_code = [NSString stringWithFormat:@"texaco-road-m-%ldf", [point.areaId integerValue] + 5];
+        NSString *xy_code = [NSString stringWithFormat:@"%.2f|%.2f", point.location.x, point.location.y];
+        NSDictionary *upload_dict = @{
+                                      //@"location_code":@"STAIR2",
+                                      @"xy":xy_code,
+                                      @"tracked_at":[NSNumber numberWithLongLong: [[NSDate date] timeIntervalSince1970]]};
+        NSLog(@"time %d", (int)[[NSDate date] timeIntervalSince1970]);
+        [[NWHandler instance] upload:upload_dict atLevel:area_code success:^(id  _Nonnull responseObject) {
+            NSLog(@"Success upload: %f", [[NSDate date] timeIntervalSince1970]);
+        } failure:^(NSError * _Nonnull error) {
+            NSLog(@"Upload Location Error: %@", error.description);
+            if (error.code == 401) {
+                [self refreshIfCannotLogin];
+                return;
+            }
+        }];
+    }
+    if (!fileManager) {
+        fileManager = [NSFileManager defaultManager];
+        fileManager.delegate = self;
+    }
+    [self write:point intoFile:@"test"];
+}
+
+- (void)refreshIfCannotLogin {
+    [[NWHandler instance] serverAccessRefresh:^(id  _Nonnull responseObject) {
+        [self recordCookies];
+    } failure:^(NSError * _Nonnull error) {
+
+    }];
+}
+
+- (void)recordCookies {
+    [[NWHandler instance] serverAccessUserID:^(id  _Nonnull responseObject) {
+
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"Grant User Error: %@", error);
+        [self backButtonClicked:nil];
+    }];
+}
+
+#pragma mark - Private Functions
+- (void)dbLoaded {
     if (!self.backView) {
         self.backView = [[MCView alloc]initWithFrame:self.newback.bounds];
         [self.newback addSubview:self.backView];
     }
+    NSArray *allAreaRefs = [[DBHandler instance] fetchAllObjectsForEntity:@"Areas" orderedBy:NULL ascending:YES];
+    if (!allAreaRefs) {
+        return;
+    }
+    NSMutableArray *temp = [NSMutableArray array];
+    for (Areas *area in allAreaRefs) {
+        Floor *new_floor = [[Floor alloc]init];
+        new_floor._id = area.id;
+        new_floor.name = area.name;
+        new_floor.altitude = area.altitude;
+        //MARK: add image path
+        new_floor.image_path = [[NSBundle mainBundle] pathForResource:@"4F" ofType:@"jpg"];
+        new_floor.scale = 0.5f;
+        [temp addObject:new_floor];
+    }
+    [self.backView addFloor:temp];
+    [self.backView showMapView];
+    [self.backView showLevelView];
     
-    
-    
-//    UIPanGestureRecognizer  *panning = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePan:)];
-//    UIRotationGestureRecognizer  *rotation = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(handleRotate:)];
-//    UIPinchGestureRecognizer  *zooming = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(handlePinch:)];
-//    UITapGestureRecognizer *tapping = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)];
-//    UILongPressGestureRecognizer *longpressing = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongpress:)];
-//    gestures = [NSArray arrayWithObjects:panning, rotation, zooming, tapping, nil];
-//
-//    panning.delegate = self;
-//    rotation.delegate = self;
-//    zooming.delegate = self;
-//    tapping.delegate = self;
-//    longpressing.delegate = self;
-//
-//    [self.backView addGestureRecognizer:panning];
-//    [self.backView addGestureRecognizer:rotation];
-//    [self.backView addGestureRecognizer:zooming];
-//    [self.backView addGestureRecognizer:longpressing];
-//    [self.backView addGestureRecognizer:tapping];
-//
-//    locButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
-//    [locButton setContentMode:UIViewContentModeScaleAspectFit];
-//    [locButton setBackgroundImage:[UIImage imageNamed:@"bg_ad_count"] forState:UIControlStateNormal];
-//    [locButton setBackgroundColor:[UIColor clearColor]];
-//    [locButton setHidden:YES];
-//
-//    [levelView setDelegate:self];
-//    [levelView setDataSource:self];
-//    areas = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", nil];
-//    shown_area = @"0";
-//    [self showMapView];
-//    [self showLevelView];
+    self.locButton.enabled = YES;
 }
 
-- (void)postReception:(Position *)point upload:(BOOL)uploadToServer {
-//    if (![shown_area isEqualToString:point.areaId]) {
-//        shown_area = point.areaId;
-//        [self showLevelView];
-//    }
-//    [self movePin:MVPinLoc toLoc:point.location isCentre:NO];
-//
-//    if (uploadToServer) {
-//
-//        NSString *area_code = [NSString stringWithFormat:@"texaco-road-m-%ldf", [point.areaId integerValue] + 5];
-//        NSString *xy_code = [NSString stringWithFormat:@"%.2f|%.2f", point.location.x, point.location.y];
-//        NSDictionary *upload_dict = @{
-//                                      //@"location_code":@"STAIR2",
-//                                      @"xy":xy_code,
-//                                      @"tracked_at":[NSNumber numberWithLongLong: [[NSDate date] timeIntervalSince1970]]};
-//        NSLog(@"time %d", (int)[[NSDate date] timeIntervalSince1970]);
-//        [[NWHandler instance] upload:upload_dict atLevel:area_code success:^(id  _Nonnull responseObject) {
-//            NSLog(@"Success upload: %f", [[NSDate date] timeIntervalSince1970]);
-//        } failure:^(NSError * _Nonnull error) {
-//            NSLog(@"Upload Location Error: %@", error.description);
-//            if (error.code == 401) {
-//                [self refreshIfCannotLogin];
-//                return;
-//            }
-//        }];
-//    }
-//    if (!fileManager) {
-//        fileManager = [NSFileManager defaultManager];
-//        fileManager.delegate = self;
-//    }
-//    [self write:point intoFile:@"test"];
-}
-
-- (void)refreshIfCannotLogin {
-//    [[NWHandler instance] serverAccessRefresh:^(id  _Nonnull responseObject) {
-//        [self recordCookies];
-//    } failure:^(NSError * _Nonnull error) {
-//
-//    }];
-}
-
-- (void)recordCookies {
-//    [[NWHandler instance] serverAccessUserID:^(id  _Nonnull responseObject) {
-//
-//    } failure:^(NSError * _Nonnull error) {
-//        NSLog(@"Grant User Error: %@", error);
-//        [self backButtonClicked:nil];
-//    }];
-}
-
-#pragma mark - LBSOfflineSDK
 - (IBAction)locationClicked:(id)sender {
-//    [[DBHandler instance] setDelegate:self];
-//    [[DBHandler instance] startLoad];
+    self.backView.navigating = YES;
+    if (self.locButton.enabled) {
+        [self readyToLocate];
+    }
+}
+
+- (IBAction)backButtonClicked:(nullable id)sender {
+    [self readyToEndLocate];
+    self.backView.navigating = NO;
+    [self.backView deallocMapView];
+    [self.backView deallocLevelView];
+    [self.backView removeFromSuperview];
+    self.backView = nil;
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)readyToLocate {
@@ -386,13 +391,12 @@ static CGFloat mDefaultStartScale = 0.5;
         NSString *demo_str = [NSString stringWithFormat:@"Room: %@", poi.name];
         NSLog(@"%@", demo_str);
     }
-    
 }
 
 #pragma mark - DBHandler Delegate
 - (void)LoadingCompleted:(BOOL)now {
     NSLog(@"enter...");
-    [self readyToLocate];
+    [self dbLoaded];
 }
 
 //- (void)updateLocation:(CGPoint)point {

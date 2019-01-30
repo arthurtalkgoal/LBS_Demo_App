@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B19142D2201F49600CBC272 /* texaco.db in Resources */ = {isa = PBXBuildFile; fileRef = 0B19142A2201F49500CBC272 /* texaco.db */; };
 		0B2343C421B43E7B00286357 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2343C321B43E7B00286357 /* CoreData.framework */; };
 		0B2343C621B43E8000286357 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2343C521B43E8000286357 /* libsqlite3.tbd */; };
 		0B7B1310219A85A100AD1D02 /* 4F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B130F219A85A100AD1D02 /* 4F.jpg */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B19142A2201F49500CBC272 /* texaco.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = texaco.db; sourceTree = "<group>"; };
 		0B2343C321B43E7B00286357 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0B2343C521B43E8000286357 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0B7B130F219A85A100AD1D02 /* 4F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4F.jpg; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B1914292201F49500CBC272 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				0B19142A2201F49500CBC272 /* texaco.db */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
 		0B7B130E219A85A100AD1D02 /* maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 		0BA9A826219130C50074B947 /* LBSOfflineClient */ = {
 			isa = PBXGroup;
 			children = (
+				0B1914292201F49500CBC272 /* database */,
 				B378FC3721C9009A00B41F8B /* tricks */,
 				B3A4563521B8C168000C000C /* network */,
 				0B7B130E219A85A100AD1D02 /* maps */,
@@ -348,6 +359,7 @@
 				0BA9A834219130C70074B947 /* LaunchScreen.storyboard in Resources */,
 				0BA9A831219130C70074B947 /* Assets.xcassets in Resources */,
 				0BA9A82F219130C50074B947 /* Main.storyboard in Resources */,
+				0B19142D2201F49600CBC272 /* texaco.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

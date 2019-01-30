@@ -20,12 +20,19 @@ typedef enum MVPinType : NSUInteger {
 
 @interface MCView : UIView
 
-@property (nonatomic, strong) UITableView *levelView;
+@property (nonatomic, assign) BOOL navigating;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 - (BOOL)addFloor:(NSArray<Floor *> *)new_floors;
 - (void)showMapView;
 - (void)hideMapView;
+- (void)deallocMapView;
+
+- (void)showLevelView;
+- (void)hideLevelView;
+- (void)deallocLevelView;
+
+- (void)moveto:(CGPoint)coor areaId:(NSString *)areaId;
 
 @end
 
