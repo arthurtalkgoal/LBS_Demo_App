@@ -1,9 +1,9 @@
 //
 //  Areas+CoreDataClass.h
-//  LBSOfflineClient
+//  LBSMapComponents
 //
-//  Created by HU Siyan on 3/12/2018.
-//  Copyright © 2018 HU Siyan. All rights reserved.
+//  Created by HU Siyan on 30/1/2019.
+//  Copyright © 2019 HU Siyan. All rights reserved.
 //
 //
 

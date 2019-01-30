@@ -1,0 +1,6 @@
+framework module LBSMapComponents {
+  umbrella header "LBSMapComponents.h"
+
+  export *
+  module * { export * }
+}

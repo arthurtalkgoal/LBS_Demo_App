@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B2343C421B43E7B00286357 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2343C321B43E7B00286357 /* CoreData.framework */; };
 		0B2343C621B43E8000286357 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2343C521B43E8000286357 /* libsqlite3.tbd */; };
-		0B2343CB21B44A7A00286357 /* Beacons+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2343C921B44A7A00286357 /* Beacons+CoreDataClass.m */; };
-		0B2343CC21B44A7A00286357 /* Beacons+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2343CA21B44A7A00286357 /* Beacons+CoreDataProperties.m */; };
-		0B7B1309219A83C400AD1D02 /* texaco.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B1307219A83C400AD1D02 /* texaco.xcdatamodeld */; };
 		0B7B1310219A85A100AD1D02 /* 4F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B130F219A85A100AD1D02 /* 4F.jpg */; };
 		0BA9A829219130C50074B947 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A828219130C50074B947 /* AppDelegate.m */; };
 		0BA9A82C219130C50074B947 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A82B219130C50074B947 /* MapViewController.m */; };
@@ -22,17 +19,13 @@
 		0BA9A84C219130C70074B947 /* LBSOfflineClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A84B219130C70074B947 /* LBSOfflineClientUITests.m */; };
 		B30B460E21F5A1B80056B378 /* LBSOfflineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; };
 		B30B460F21F5A1B80056B378 /* LBSOfflineSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B3272C4721B0DC5500D63E3C /* DBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B3272C4621B0DC5500D63E3C /* DBHandler.m */; };
 		B378FC3521C8FF1D00B41F8B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B378FC3321C8FF1D00B41F8B /* AVFoundation.framework */; };
 		B378FC3621C8FF1D00B41F8B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B378FC3421C8FF1D00B41F8B /* AVKit.framework */; };
 		B378FC3921C9009A00B41F8B /* lullaby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B378FC3821C9009A00B41F8B /* lullaby.mp3 */; };
-		B3A4563021B7C7C9000C000C /* texaco.db in Resources */ = {isa = PBXBuildFile; fileRef = B3A4562F21B7C7C8000C000C /* texaco.db */; };
 		B3A4563821B8C181000C000C /* NWHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A4563721B8C181000C000C /* NWHandler.m */; };
-		B3DBA2E821EC74DE001D7109 /* Pois+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBA2E621EC74DE001D7109 /* Pois+CoreDataClass.m */; };
-		B3DBA2E921EC74DE001D7109 /* Pois+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBA2E721EC74DE001D7109 /* Pois+CoreDataProperties.m */; };
+		B3BDC2A32201983E00960B1F /* LBSMapComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BDC2A22201983E00960B1F /* LBSMapComponents.framework */; };
+		B3BDC2A42201983E00960B1F /* LBSMapComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3BDC2A22201983E00960B1F /* LBSMapComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3ED8DBC21C0AC21002BAE6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ED8DBB21C0AC21002BAE6A /* LoginViewController.m */; };
-		B3EFF68821B464B3000B563B /* Areas+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EFF68621B464B3000B563B /* Areas+CoreDataClass.m */; };
-		B3EFF68921B464B3000B563B /* Areas+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EFF68721B464B3000B563B /* Areas+CoreDataProperties.m */; };
 		DE609E9825E84E824329DC5B /* libPods-LBSOfflineClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61D9AE4E7E8E44876F3A4DE /* libPods-LBSOfflineClient.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +54,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B30B460F21F5A1B80056B378 /* LBSOfflineSDK.framework in Embed Frameworks */,
+				B3BDC2A42201983E00960B1F /* LBSMapComponents.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,11 +64,6 @@
 /* Begin PBXFileReference section */
 		0B2343C321B43E7B00286357 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0B2343C521B43E8000286357 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		0B2343C721B44A7A00286357 /* Beacons+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Beacons+CoreDataProperties.h"; sourceTree = "<group>"; };
-		0B2343C821B44A7A00286357 /* Beacons+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Beacons+CoreDataClass.h"; sourceTree = "<group>"; };
-		0B2343C921B44A7A00286357 /* Beacons+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Beacons+CoreDataClass.m"; sourceTree = "<group>"; };
-		0B2343CA21B44A7A00286357 /* Beacons+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Beacons+CoreDataProperties.m"; sourceTree = "<group>"; };
-		0B7B1308219A83C400AD1D02 /* texaco.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = texaco.xcdatamodel; sourceTree = "<group>"; };
 		0B7B130F219A85A100AD1D02 /* 4F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4F.jpg; sourceTree = "<group>"; };
 		0B7B131B219A9BCD00AD1D02 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA9A824219130C50074B947 /* LBSOfflineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBSOfflineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,26 +84,16 @@
 		B2550602F3FE6320D96EBC63 /* Pods-LBSOfflineClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBSOfflineClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBSOfflineClient/Pods-LBSOfflineClient.release.xcconfig"; sourceTree = "<group>"; };
 		B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = "<group>"; };
 		B3267CC721F596B800384640 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = "<group>"; };
-		B3272C4521B0DC5500D63E3C /* DBHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBHandler.h; sourceTree = "<group>"; };
-		B3272C4621B0DC5500D63E3C /* DBHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBHandler.m; sourceTree = "<group>"; };
 		B328E42D21AFCF45009190F5 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B378FC3321C8FF1D00B41F8B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B378FC3421C8FF1D00B41F8B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		B378FC3821C9009A00B41F8B /* lullaby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lullaby.mp3; sourceTree = "<group>"; };
 		B37BDC8421C2040000782353 /* NWSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWSettings.h; sourceTree = "<group>"; };
-		B3A4562F21B7C7C8000C000C /* texaco.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = texaco.db; sourceTree = "<group>"; };
 		B3A4563621B8C181000C000C /* NWHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWHandler.h; sourceTree = "<group>"; };
 		B3A4563721B8C181000C000C /* NWHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NWHandler.m; sourceTree = "<group>"; };
-		B3DBA2E421EC74DE001D7109 /* Pois+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pois+CoreDataProperties.h"; sourceTree = "<group>"; };
-		B3DBA2E521EC74DE001D7109 /* Pois+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pois+CoreDataClass.h"; sourceTree = "<group>"; };
-		B3DBA2E621EC74DE001D7109 /* Pois+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Pois+CoreDataClass.m"; sourceTree = "<group>"; };
-		B3DBA2E721EC74DE001D7109 /* Pois+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Pois+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B3BDC2A22201983E00960B1F /* LBSMapComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSMapComponents.framework; sourceTree = "<group>"; };
 		B3ED8DBA21C0AC21002BAE6A /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B3ED8DBB21C0AC21002BAE6A /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		B3EFF68421B464B3000B563B /* Areas+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Areas+CoreDataProperties.h"; sourceTree = "<group>"; };
-		B3EFF68521B464B3000B563B /* Areas+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Areas+CoreDataClass.h"; sourceTree = "<group>"; };
-		B3EFF68621B464B3000B563B /* Areas+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Areas+CoreDataClass.m"; sourceTree = "<group>"; };
-		B3EFF68721B464B3000B563B /* Areas+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Areas+CoreDataProperties.m"; sourceTree = "<group>"; };
 		DC67EBEEEF6CED7470ABCB0C /* Pods-LBSOfflineClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBSOfflineClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBSOfflineClient/Pods-LBSOfflineClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +108,7 @@
 				0B2343C421B43E7B00286357 /* CoreData.framework in Frameworks */,
 				DE609E9825E84E824329DC5B /* libPods-LBSOfflineClient.a in Frameworks */,
 				B30B460E21F5A1B80056B378 /* LBSOfflineSDK.framework in Frameworks */,
+				B3BDC2A32201983E00960B1F /* LBSMapComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,29 +129,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B7B1306219A839400AD1D02 /* database */ = {
-			isa = PBXGroup;
-			children = (
-				B3EFF68521B464B3000B563B /* Areas+CoreDataClass.h */,
-				B3EFF68621B464B3000B563B /* Areas+CoreDataClass.m */,
-				B3EFF68421B464B3000B563B /* Areas+CoreDataProperties.h */,
-				B3EFF68721B464B3000B563B /* Areas+CoreDataProperties.m */,
-				0B2343C821B44A7A00286357 /* Beacons+CoreDataClass.h */,
-				0B2343C921B44A7A00286357 /* Beacons+CoreDataClass.m */,
-				0B2343C721B44A7A00286357 /* Beacons+CoreDataProperties.h */,
-				0B2343CA21B44A7A00286357 /* Beacons+CoreDataProperties.m */,
-				B3DBA2E421EC74DE001D7109 /* Pois+CoreDataProperties.h */,
-				B3DBA2E521EC74DE001D7109 /* Pois+CoreDataClass.h */,
-				B3DBA2E621EC74DE001D7109 /* Pois+CoreDataClass.m */,
-				B3DBA2E721EC74DE001D7109 /* Pois+CoreDataProperties.m */,
-				B3A4562F21B7C7C8000C000C /* texaco.db */,
-				0B7B1307219A83C400AD1D02 /* texaco.xcdatamodeld */,
-				B3272C4521B0DC5500D63E3C /* DBHandler.h */,
-				B3272C4621B0DC5500D63E3C /* DBHandler.m */,
-			);
-			path = database;
-			sourceTree = "<group>";
-		};
 		0B7B130E219A85A100AD1D02 /* maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +155,7 @@
 		0BA9A81B219130C50074B947 = {
 			isa = PBXGroup;
 			children = (
+				B3BDC2A22201983E00960B1F /* LBSMapComponents.framework */,
 				B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */,
 				0BA9A826219130C50074B947 /* LBSOfflineClient */,
 				0BA9A84A219130C70074B947 /* LBSOfflineClientUITests */,
@@ -222,7 +180,6 @@
 			children = (
 				B378FC3721C9009A00B41F8B /* tricks */,
 				B3A4563521B8C168000C000C /* network */,
-				0B7B1306219A839400AD1D02 /* database */,
 				0B7B130E219A85A100AD1D02 /* maps */,
 				0BA9A827219130C50074B947 /* AppDelegate.h */,
 				0BA9A828219130C50074B947 /* AppDelegate.m */,
@@ -388,7 +345,6 @@
 			files = (
 				B378FC3921C9009A00B41F8B /* lullaby.mp3 in Resources */,
 				0B7B1310219A85A100AD1D02 /* 4F.jpg in Resources */,
-				B3A4563021B7C7C9000C000C /* texaco.db in Resources */,
 				0BA9A834219130C70074B947 /* LaunchScreen.storyboard in Resources */,
 				0BA9A831219130C70074B947 /* Assets.xcassets in Resources */,
 				0BA9A82F219130C50074B947 /* Main.storyboard in Resources */,
@@ -485,17 +441,9 @@
 			files = (
 				0BA9A82C219130C50074B947 /* MapViewController.m in Sources */,
 				B3A4563821B8C181000C000C /* NWHandler.m in Sources */,
-				B3DBA2E821EC74DE001D7109 /* Pois+CoreDataClass.m in Sources */,
-				0B2343CB21B44A7A00286357 /* Beacons+CoreDataClass.m in Sources */,
 				0BA9A837219130C70074B947 /* main.m in Sources */,
-				B3EFF68821B464B3000B563B /* Areas+CoreDataClass.m in Sources */,
-				B3EFF68921B464B3000B563B /* Areas+CoreDataProperties.m in Sources */,
 				0BA9A829219130C50074B947 /* AppDelegate.m in Sources */,
 				B3ED8DBC21C0AC21002BAE6A /* LoginViewController.m in Sources */,
-				B3272C4721B0DC5500D63E3C /* DBHandler.m in Sources */,
-				0B2343CC21B44A7A00286357 /* Beacons+CoreDataProperties.m in Sources */,
-				0B7B1309219A83C400AD1D02 /* texaco.xcdatamodeld in Sources */,
-				B3DBA2E921EC74DE001D7109 /* Pois+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +622,7 @@
 					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../LBSMapComponents/**",
 					"$(SRCROOT)/../LBSOfflineSDK/**",
 					"$(SRCROOT)",
 				);
@@ -704,6 +653,7 @@
 					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../LBSMapComponents/**",
 					"$(SRCROOT)/../LBSOfflineSDK/**",
 					"$(SRCROOT)",
 				);
@@ -835,19 +785,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0B7B1307219A83C400AD1D02 /* texaco.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0B7B1308219A83C400AD1D02 /* texaco.xcdatamodel */,
-			);
-			currentVersion = 0B7B1308219A83C400AD1D02 /* texaco.xcdatamodel */;
-			path = texaco.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0BA9A81C219130C50074B947 /* Project object */;
 }
