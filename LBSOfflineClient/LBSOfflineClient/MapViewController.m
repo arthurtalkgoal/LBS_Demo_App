@@ -237,7 +237,7 @@ static CGFloat mDefaultStartScale = 0.5;
         new_floor.name = area.name;
         new_floor.altitude = area.altitude;
         //MARK: add image path
-        new_floor.image_path = [[NSBundle mainBundle] pathForResource:@"4F" ofType:@"jpg"];
+        new_floor.image_path = [[NSBundle mainBundle] pathForResource:new_floor.name ofType:@"jpg"];
         new_floor.scale = 0.5f;
         [temp addObject:new_floor];
     }

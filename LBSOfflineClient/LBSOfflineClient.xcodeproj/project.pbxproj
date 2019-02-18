@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B19142D2201F49600CBC272 /* texaco.db in Resources */ = {isa = PBXBuildFile; fileRef = 0B19142A2201F49500CBC272 /* texaco.db */; };
 		0B2343C421B43E7B00286357 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2343C321B43E7B00286357 /* CoreData.framework */; };
 		0B2343C621B43E8000286357 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2343C521B43E8000286357 /* libsqlite3.tbd */; };
 		0B7B1310219A85A100AD1D02 /* 4F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B130F219A85A100AD1D02 /* 4F.jpg */; };
@@ -18,6 +17,14 @@
 		0BA9A834219130C70074B947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA9A832219130C70074B947 /* LaunchScreen.storyboard */; };
 		0BA9A837219130C70074B947 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A836219130C70074B947 /* main.m */; };
 		0BA9A84C219130C70074B947 /* LBSOfflineClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A84B219130C70074B947 /* LBSOfflineClientUITests.m */; };
+		B306DA65221A80D800CDE317 /* 7F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA5E221A80D800CDE317 /* 7F.jpg */; };
+		B306DA66221A80D800CDE317 /* 3F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA5F221A80D800CDE317 /* 3F.jpg */; };
+		B306DA67221A80D800CDE317 /* 6F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA60221A80D800CDE317 /* 6F.jpg */; };
+		B306DA68221A80D800CDE317 /* GF.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA61221A80D800CDE317 /* GF.jpg */; };
+		B306DA69221A80D800CDE317 /* 1F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA62221A80D800CDE317 /* 1F.jpg */; };
+		B306DA6A221A80D800CDE317 /* 2F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA63221A80D800CDE317 /* 2F.jpg */; };
+		B306DA6B221A80D800CDE317 /* 5F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA64221A80D800CDE317 /* 5F.jpg */; };
+		B306DA6D221A80E100CDE317 /* texaco.db in Resources */ = {isa = PBXBuildFile; fileRef = B306DA6C221A80E000CDE317 /* texaco.db */; };
 		B30B460E21F5A1B80056B378 /* LBSOfflineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; };
 		B30B460F21F5A1B80056B378 /* LBSOfflineSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B378FC3521C8FF1D00B41F8B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B378FC3321C8FF1D00B41F8B /* AVFoundation.framework */; };
@@ -63,7 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B19142A2201F49500CBC272 /* texaco.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = texaco.db; sourceTree = "<group>"; };
 		0B2343C321B43E7B00286357 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0B2343C521B43E8000286357 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0B7B130F219A85A100AD1D02 /* 4F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4F.jpg; sourceTree = "<group>"; };
@@ -84,6 +90,14 @@
 		0BA9A84D219130C70074B947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A61D9AE4E7E8E44876F3A4DE /* libPods-LBSOfflineClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LBSOfflineClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2550602F3FE6320D96EBC63 /* Pods-LBSOfflineClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBSOfflineClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBSOfflineClient/Pods-LBSOfflineClient.release.xcconfig"; sourceTree = "<group>"; };
+		B306DA5E221A80D800CDE317 /* 7F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7F.jpg; sourceTree = "<group>"; };
+		B306DA5F221A80D800CDE317 /* 3F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3F.jpg; sourceTree = "<group>"; };
+		B306DA60221A80D800CDE317 /* 6F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6F.jpg; sourceTree = "<group>"; };
+		B306DA61221A80D800CDE317 /* GF.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GF.jpg; sourceTree = "<group>"; };
+		B306DA62221A80D800CDE317 /* 1F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1F.jpg; sourceTree = "<group>"; };
+		B306DA63221A80D800CDE317 /* 2F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2F.jpg; sourceTree = "<group>"; };
+		B306DA64221A80D800CDE317 /* 5F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5F.jpg; sourceTree = "<group>"; };
+		B306DA6C221A80E000CDE317 /* texaco.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = texaco.db; sourceTree = "<group>"; };
 		B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = "<group>"; };
 		B3267CC721F596B800384640 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = "<group>"; };
 		B328E42D21AFCF45009190F5 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +148,7 @@
 		0B1914292201F49500CBC272 /* database */ = {
 			isa = PBXGroup;
 			children = (
-				0B19142A2201F49500CBC272 /* texaco.db */,
+				B306DA6C221A80E000CDE317 /* texaco.db */,
 			);
 			path = database;
 			sourceTree = "<group>";
@@ -142,6 +156,13 @@
 		0B7B130E219A85A100AD1D02 /* maps */ = {
 			isa = PBXGroup;
 			children = (
+				B306DA62221A80D800CDE317 /* 1F.jpg */,
+				B306DA63221A80D800CDE317 /* 2F.jpg */,
+				B306DA5F221A80D800CDE317 /* 3F.jpg */,
+				B306DA64221A80D800CDE317 /* 5F.jpg */,
+				B306DA60221A80D800CDE317 /* 6F.jpg */,
+				B306DA5E221A80D800CDE317 /* 7F.jpg */,
+				B306DA61221A80D800CDE317 /* GF.jpg */,
 				0B7B130F219A85A100AD1D02 /* 4F.jpg */,
 			);
 			path = maps;
@@ -354,12 +375,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B306DA6B221A80D800CDE317 /* 5F.jpg in Resources */,
+				B306DA68221A80D800CDE317 /* GF.jpg in Resources */,
+				B306DA6D221A80E100CDE317 /* texaco.db in Resources */,
+				B306DA6A221A80D800CDE317 /* 2F.jpg in Resources */,
 				B378FC3921C9009A00B41F8B /* lullaby.mp3 in Resources */,
 				0B7B1310219A85A100AD1D02 /* 4F.jpg in Resources */,
+				B306DA69221A80D800CDE317 /* 1F.jpg in Resources */,
+				B306DA67221A80D800CDE317 /* 6F.jpg in Resources */,
 				0BA9A834219130C70074B947 /* LaunchScreen.storyboard in Resources */,
 				0BA9A831219130C70074B947 /* Assets.xcassets in Resources */,
 				0BA9A82F219130C50074B947 /* Main.storyboard in Resources */,
-				0B19142D2201F49600CBC272 /* texaco.db in Resources */,
+				B306DA66221A80D800CDE317 /* 3F.jpg in Resources */,
+				B306DA65221A80D800CDE317 /* 7F.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
