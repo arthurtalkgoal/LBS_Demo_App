@@ -363,6 +363,7 @@
         new_pos = [[Position alloc]init];
     }
     new_pos = point;
+    new_pos.areaId = @"0";
     [self postReception:new_pos upload:YES];
 }
 
