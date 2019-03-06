@@ -2,7 +2,7 @@
 //  Beacons+CoreDataClass.h
 //  LBSMapComponents
 //
-//  Created by HU Siyan on 30/1/2019.
+//  Created by HU Siyan on 6/3/2019.
 //  Copyright © 2019 HU Siyan. All rights reserved.
 //
 //

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *_id;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *image_path;
+@property (nonatomic, strong) NSString *code;
 @property (nonatomic, assign) float scale;
 @property (nonatomic, assign) float altitude;
 

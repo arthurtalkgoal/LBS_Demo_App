@@ -2,7 +2,7 @@
 //  Areas+CoreDataProperties.h
 //  LBSMapComponents
 //
-//  Created by HU Siyan on 30/1/2019.
+//  Created by HU Siyan on 6/3/2019.
 //  Copyright © 2019 HU Siyan. All rights reserved.
 //
 //
@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) float altitude;
 @property (nullable, nonatomic, copy) NSString *id;
 @property (nullable, nonatomic, copy) NSString *name;
+@property (nullable, nonatomic, copy) NSString *level_code;
 
 @end
 

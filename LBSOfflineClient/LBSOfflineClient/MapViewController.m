@@ -217,9 +217,10 @@
         Floor *new_floor = [[Floor alloc]init];
         new_floor._id = area.id;
         new_floor.name = area.name;
+        new_floor.code = area.level_code;
         new_floor.altitude = area.altitude;
         //MARK: add image path
-        new_floor.image_path = [[NSBundle mainBundle] pathForResource:new_floor.name ofType:@"jpg"];
+        new_floor.image_path = [[NSBundle mainBundle] pathForResource:new_floor.code ofType:@"jpg"];
         new_floor.scale = 0.5f;
         [temp addObject:new_floor];
     }
@@ -298,13 +299,17 @@
             poi_data.areaId = poi.areaId;
             poi_data.name = poi.name;
             
+            if (![poi_data.name containsString:@"RM"]) {
+                continue;
+            }
+            
             NSMutableArray *temp_s = [NSMutableArray array];
             NSMutableCharacterSet *sepChars = [NSMutableCharacterSet characterSetWithCharactersInString:@"[], "];
             NSCharacterSet *nullChars = [NSCharacterSet characterSetWithCharactersInString:@""];
             [sepChars formUnionWithCharacterSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             [sepChars formUnionWithCharacterSet:nullChars];
             
-            NSMutableArray *subs = [NSMutableArray arrayWithArray:[poi.vertex componentsSeparatedByCharactersInSet:sepChars]];
+            NSMutableArray *subs = [NSMutableArray arrayWithArray:[poi.vertices componentsSeparatedByCharactersInSet:sepChars]];
             NSMutableArray *to_delete = [NSMutableArray array];
             for (NSString *subtest  in subs) {
                 if (subtest.length == 0) {
