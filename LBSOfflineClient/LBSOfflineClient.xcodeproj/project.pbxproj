@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B2343C421B43E7B00286357 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2343C321B43E7B00286357 /* CoreData.framework */; };
 		0B2343C621B43E8000286357 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2343C521B43E8000286357 /* libsqlite3.tbd */; };
-		0B7B1310219A85A100AD1D02 /* 4F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B130F219A85A100AD1D02 /* 4F.jpg */; };
 		0BA9A829219130C50074B947 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A828219130C50074B947 /* AppDelegate.m */; };
 		0BA9A82C219130C50074B947 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A82B219130C50074B947 /* MapViewController.m */; };
 		0BA9A82F219130C50074B947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA9A82D219130C50074B947 /* Main.storyboard */; };
@@ -17,22 +16,23 @@
 		0BA9A834219130C70074B947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA9A832219130C70074B947 /* LaunchScreen.storyboard */; };
 		0BA9A837219130C70074B947 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A836219130C70074B947 /* main.m */; };
 		0BA9A84C219130C70074B947 /* LBSOfflineClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A84B219130C70074B947 /* LBSOfflineClientUITests.m */; };
-		B306DA65221A80D800CDE317 /* 7F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA5E221A80D800CDE317 /* 7F.jpg */; };
-		B306DA66221A80D800CDE317 /* 3F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA5F221A80D800CDE317 /* 3F.jpg */; };
-		B306DA67221A80D800CDE317 /* 6F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA60221A80D800CDE317 /* 6F.jpg */; };
-		B306DA68221A80D800CDE317 /* GF.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA61221A80D800CDE317 /* GF.jpg */; };
-		B306DA69221A80D800CDE317 /* 1F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA62221A80D800CDE317 /* 1F.jpg */; };
-		B306DA6A221A80D800CDE317 /* 2F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA63221A80D800CDE317 /* 2F.jpg */; };
-		B306DA6B221A80D800CDE317 /* 5F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B306DA64221A80D800CDE317 /* 5F.jpg */; };
-		B306DA6D221A80E100CDE317 /* texaco.db in Resources */ = {isa = PBXBuildFile; fileRef = B306DA6C221A80E000CDE317 /* texaco.db */; };
 		B30B460E21F5A1B80056B378 /* LBSOfflineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; };
 		B30B460F21F5A1B80056B378 /* LBSOfflineSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3408F51222FA35400FD8E1A /* texaco-road-m-1f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F42222FA35300FD8E1A /* texaco-road-m-1f.jpg */; };
+		B3408F52222FA35400FD8E1A /* texaco-road-m-2f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F44222FA35300FD8E1A /* texaco-road-m-2f.jpg */; };
+		B3408F53222FA35400FD8E1A /* texaco-road-m-3f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F46222FA35300FD8E1A /* texaco-road-m-3f.jpg */; };
+		B3408F54222FA35400FD8E1A /* texaco-road-m-7f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F48222FA35300FD8E1A /* texaco-road-m-7f.jpg */; };
+		B3408F55222FA35400FD8E1A /* texaco-road-m-gf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F4A222FA35300FD8E1A /* texaco-road-m-gf.jpg */; };
+		B3408F56222FA35400FD8E1A /* texaco-road-m-5f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F4C222FA35300FD8E1A /* texaco-road-m-5f.jpg */; };
+		B3408F57222FA35400FD8E1A /* texaco-road-m-4f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F4E222FA35300FD8E1A /* texaco-road-m-4f.jpg */; };
+		B3408F58222FA35400FD8E1A /* texaco-road-m-6f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F50222FA35400FD8E1A /* texaco-road-m-6f.jpg */; };
+		B3408FA9222FBF5300FD8E1A /* texaco.db in Resources */ = {isa = PBXBuildFile; fileRef = B3408FA6222FBF5300FD8E1A /* texaco.db */; };
+		B3408FAC222FC06D00FD8E1A /* LBSMapComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3408FAB222FC06D00FD8E1A /* LBSMapComponents.framework */; };
+		B3408FAD222FC06D00FD8E1A /* LBSMapComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3408FAB222FC06D00FD8E1A /* LBSMapComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B378FC3521C8FF1D00B41F8B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B378FC3321C8FF1D00B41F8B /* AVFoundation.framework */; };
 		B378FC3621C8FF1D00B41F8B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B378FC3421C8FF1D00B41F8B /* AVKit.framework */; };
 		B378FC3921C9009A00B41F8B /* lullaby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B378FC3821C9009A00B41F8B /* lullaby.mp3 */; };
 		B3A4563821B8C181000C000C /* NWHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A4563721B8C181000C000C /* NWHandler.m */; };
-		B3BDC2A32201983E00960B1F /* LBSMapComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BDC2A22201983E00960B1F /* LBSMapComponents.framework */; };
-		B3BDC2A42201983E00960B1F /* LBSMapComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3BDC2A22201983E00960B1F /* LBSMapComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3ED8DBC21C0AC21002BAE6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ED8DBB21C0AC21002BAE6A /* LoginViewController.m */; };
 		DE609E9825E84E824329DC5B /* libPods-LBSOfflineClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61D9AE4E7E8E44876F3A4DE /* libPods-LBSOfflineClient.a */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B30B460F21F5A1B80056B378 /* LBSOfflineSDK.framework in Embed Frameworks */,
-				B3BDC2A42201983E00960B1F /* LBSMapComponents.framework in Embed Frameworks */,
+				B3408FAD222FC06D00FD8E1A /* LBSMapComponents.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,7 +72,6 @@
 /* Begin PBXFileReference section */
 		0B2343C321B43E7B00286357 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0B2343C521B43E8000286357 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		0B7B130F219A85A100AD1D02 /* 4F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4F.jpg; sourceTree = "<group>"; };
 		0B7B131B219A9BCD00AD1D02 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA9A824219130C50074B947 /* LBSOfflineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBSOfflineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA9A827219130C50074B947 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,24 +89,25 @@
 		0BA9A84D219130C70074B947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A61D9AE4E7E8E44876F3A4DE /* libPods-LBSOfflineClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LBSOfflineClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2550602F3FE6320D96EBC63 /* Pods-LBSOfflineClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBSOfflineClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBSOfflineClient/Pods-LBSOfflineClient.release.xcconfig"; sourceTree = "<group>"; };
-		B306DA5E221A80D800CDE317 /* 7F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7F.jpg; sourceTree = "<group>"; };
-		B306DA5F221A80D800CDE317 /* 3F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3F.jpg; sourceTree = "<group>"; };
-		B306DA60221A80D800CDE317 /* 6F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6F.jpg; sourceTree = "<group>"; };
-		B306DA61221A80D800CDE317 /* GF.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GF.jpg; sourceTree = "<group>"; };
-		B306DA62221A80D800CDE317 /* 1F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1F.jpg; sourceTree = "<group>"; };
-		B306DA63221A80D800CDE317 /* 2F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2F.jpg; sourceTree = "<group>"; };
-		B306DA64221A80D800CDE317 /* 5F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5F.jpg; sourceTree = "<group>"; };
-		B306DA6C221A80E000CDE317 /* texaco.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = texaco.db; sourceTree = "<group>"; };
 		B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = "<group>"; };
 		B3267CC721F596B800384640 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = "<group>"; };
 		B328E42D21AFCF45009190F5 /* LBSOfflineSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBSOfflineSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3408F42222FA35300FD8E1A /* texaco-road-m-1f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "texaco-road-m-1f.jpg"; sourceTree = "<group>"; };
+		B3408F44222FA35300FD8E1A /* texaco-road-m-2f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "texaco-road-m-2f.jpg"; sourceTree = "<group>"; };
+		B3408F46222FA35300FD8E1A /* texaco-road-m-3f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "texaco-road-m-3f.jpg"; sourceTree = "<group>"; };
+		B3408F48222FA35300FD8E1A /* texaco-road-m-7f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "texaco-road-m-7f.jpg"; sourceTree = "<group>"; };
+		B3408F4A222FA35300FD8E1A /* texaco-road-m-gf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "texaco-road-m-gf.jpg"; sourceTree = "<group>"; };
+		B3408F4C222FA35300FD8E1A /* texaco-road-m-5f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "texaco-road-m-5f.jpg"; sourceTree = "<group>"; };
+		B3408F4E222FA35300FD8E1A /* texaco-road-m-4f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "texaco-road-m-4f.jpg"; sourceTree = "<group>"; };
+		B3408F50222FA35400FD8E1A /* texaco-road-m-6f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "texaco-road-m-6f.jpg"; sourceTree = "<group>"; };
+		B3408FA6222FBF5300FD8E1A /* texaco.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = texaco.db; sourceTree = "<group>"; };
+		B3408FAB222FC06D00FD8E1A /* LBSMapComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSMapComponents.framework; sourceTree = "<group>"; };
 		B378FC3321C8FF1D00B41F8B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B378FC3421C8FF1D00B41F8B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		B378FC3821C9009A00B41F8B /* lullaby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lullaby.mp3; sourceTree = "<group>"; };
 		B37BDC8421C2040000782353 /* NWSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWSettings.h; sourceTree = "<group>"; };
 		B3A4563621B8C181000C000C /* NWHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWHandler.h; sourceTree = "<group>"; };
 		B3A4563721B8C181000C000C /* NWHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NWHandler.m; sourceTree = "<group>"; };
-		B3BDC2A22201983E00960B1F /* LBSMapComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LBSMapComponents.framework; sourceTree = "<group>"; };
 		B3ED8DBA21C0AC21002BAE6A /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B3ED8DBB21C0AC21002BAE6A /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DC67EBEEEF6CED7470ABCB0C /* Pods-LBSOfflineClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBSOfflineClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBSOfflineClient/Pods-LBSOfflineClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 				0B2343C421B43E7B00286357 /* CoreData.framework in Frameworks */,
 				DE609E9825E84E824329DC5B /* libPods-LBSOfflineClient.a in Frameworks */,
 				B30B460E21F5A1B80056B378 /* LBSOfflineSDK.framework in Frameworks */,
-				B3BDC2A32201983E00960B1F /* LBSMapComponents.framework in Frameworks */,
+				B3408FAC222FC06D00FD8E1A /* LBSMapComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +148,7 @@
 		0B1914292201F49500CBC272 /* database */ = {
 			isa = PBXGroup;
 			children = (
-				B306DA6C221A80E000CDE317 /* texaco.db */,
+				B3408FA6222FBF5300FD8E1A /* texaco.db */,
 			);
 			path = database;
 			sourceTree = "<group>";
@@ -156,14 +156,14 @@
 		0B7B130E219A85A100AD1D02 /* maps */ = {
 			isa = PBXGroup;
 			children = (
-				B306DA62221A80D800CDE317 /* 1F.jpg */,
-				B306DA63221A80D800CDE317 /* 2F.jpg */,
-				B306DA5F221A80D800CDE317 /* 3F.jpg */,
-				B306DA64221A80D800CDE317 /* 5F.jpg */,
-				B306DA60221A80D800CDE317 /* 6F.jpg */,
-				B306DA5E221A80D800CDE317 /* 7F.jpg */,
-				B306DA61221A80D800CDE317 /* GF.jpg */,
-				0B7B130F219A85A100AD1D02 /* 4F.jpg */,
+				B3408F41222FA35300FD8E1A /* texaco-road-m-1f */,
+				B3408F43222FA35300FD8E1A /* texaco-road-m-2f */,
+				B3408F45222FA35300FD8E1A /* texaco-road-m-3f */,
+				B3408F4D222FA35300FD8E1A /* texaco-road-m-4f */,
+				B3408F4B222FA35300FD8E1A /* texaco-road-m-5f */,
+				B3408F4F222FA35400FD8E1A /* texaco-road-m-6f */,
+				B3408F47222FA35300FD8E1A /* texaco-road-m-7f */,
+				B3408F49222FA35300FD8E1A /* texaco-road-m-gf */,
 			);
 			path = maps;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 		0BA9A81B219130C50074B947 = {
 			isa = PBXGroup;
 			children = (
-				B3BDC2A22201983E00960B1F /* LBSMapComponents.framework */,
+				B3408FAB222FC06D00FD8E1A /* LBSMapComponents.framework */,
 				B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */,
 				0BA9A826219130C50074B947 /* LBSOfflineClient */,
 				0BA9A84A219130C70074B947 /* LBSOfflineClientUITests */,
@@ -244,6 +244,70 @@
 				B2550602F3FE6320D96EBC63 /* Pods-LBSOfflineClient.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3408F41222FA35300FD8E1A /* texaco-road-m-1f */ = {
+			isa = PBXGroup;
+			children = (
+				B3408F42222FA35300FD8E1A /* texaco-road-m-1f.jpg */,
+			);
+			path = "texaco-road-m-1f";
+			sourceTree = "<group>";
+		};
+		B3408F43222FA35300FD8E1A /* texaco-road-m-2f */ = {
+			isa = PBXGroup;
+			children = (
+				B3408F44222FA35300FD8E1A /* texaco-road-m-2f.jpg */,
+			);
+			path = "texaco-road-m-2f";
+			sourceTree = "<group>";
+		};
+		B3408F45222FA35300FD8E1A /* texaco-road-m-3f */ = {
+			isa = PBXGroup;
+			children = (
+				B3408F46222FA35300FD8E1A /* texaco-road-m-3f.jpg */,
+			);
+			path = "texaco-road-m-3f";
+			sourceTree = "<group>";
+		};
+		B3408F47222FA35300FD8E1A /* texaco-road-m-7f */ = {
+			isa = PBXGroup;
+			children = (
+				B3408F48222FA35300FD8E1A /* texaco-road-m-7f.jpg */,
+			);
+			path = "texaco-road-m-7f";
+			sourceTree = "<group>";
+		};
+		B3408F49222FA35300FD8E1A /* texaco-road-m-gf */ = {
+			isa = PBXGroup;
+			children = (
+				B3408F4A222FA35300FD8E1A /* texaco-road-m-gf.jpg */,
+			);
+			path = "texaco-road-m-gf";
+			sourceTree = "<group>";
+		};
+		B3408F4B222FA35300FD8E1A /* texaco-road-m-5f */ = {
+			isa = PBXGroup;
+			children = (
+				B3408F4C222FA35300FD8E1A /* texaco-road-m-5f.jpg */,
+			);
+			path = "texaco-road-m-5f";
+			sourceTree = "<group>";
+		};
+		B3408F4D222FA35300FD8E1A /* texaco-road-m-4f */ = {
+			isa = PBXGroup;
+			children = (
+				B3408F4E222FA35300FD8E1A /* texaco-road-m-4f.jpg */,
+			);
+			path = "texaco-road-m-4f";
+			sourceTree = "<group>";
+		};
+		B3408F4F222FA35400FD8E1A /* texaco-road-m-6f */ = {
+			isa = PBXGroup;
+			children = (
+				B3408F50222FA35400FD8E1A /* texaco-road-m-6f.jpg */,
+			);
+			path = "texaco-road-m-6f";
 			sourceTree = "<group>";
 		};
 		B378FC3721C9009A00B41F8B /* tricks */ = {
@@ -375,19 +439,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B306DA6B221A80D800CDE317 /* 5F.jpg in Resources */,
-				B306DA68221A80D800CDE317 /* GF.jpg in Resources */,
-				B306DA6D221A80E100CDE317 /* texaco.db in Resources */,
-				B306DA6A221A80D800CDE317 /* 2F.jpg in Resources */,
+				B3408F57222FA35400FD8E1A /* texaco-road-m-4f.jpg in Resources */,
+				B3408F51222FA35400FD8E1A /* texaco-road-m-1f.jpg in Resources */,
 				B378FC3921C9009A00B41F8B /* lullaby.mp3 in Resources */,
-				0B7B1310219A85A100AD1D02 /* 4F.jpg in Resources */,
-				B306DA69221A80D800CDE317 /* 1F.jpg in Resources */,
-				B306DA67221A80D800CDE317 /* 6F.jpg in Resources */,
+				B3408F54222FA35400FD8E1A /* texaco-road-m-7f.jpg in Resources */,
+				B3408FA9222FBF5300FD8E1A /* texaco.db in Resources */,
+				B3408F55222FA35400FD8E1A /* texaco-road-m-gf.jpg in Resources */,
+				B3408F56222FA35400FD8E1A /* texaco-road-m-5f.jpg in Resources */,
 				0BA9A834219130C70074B947 /* LaunchScreen.storyboard in Resources */,
+				B3408F53222FA35400FD8E1A /* texaco-road-m-3f.jpg in Resources */,
+				B3408F52222FA35400FD8E1A /* texaco-road-m-2f.jpg in Resources */,
+				B3408F58222FA35400FD8E1A /* texaco-road-m-6f.jpg in Resources */,
 				0BA9A831219130C70074B947 /* Assets.xcassets in Resources */,
 				0BA9A82F219130C50074B947 /* Main.storyboard in Resources */,
-				B306DA66221A80D800CDE317 /* 3F.jpg in Resources */,
-				B306DA65221A80D800CDE317 /* 7F.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
