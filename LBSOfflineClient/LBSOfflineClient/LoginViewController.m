@@ -68,27 +68,27 @@
 
 - (IBAction)loginSelected:(id)sender {
     
-//    [self grant_permitted];
+    [self grant_permitted];
     
-<<<<<<< HEAD
-    if (![pass_word length] || ![user_name length]) {
-        return;
-    }
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+//    if (![pass_word length] || ![user_name length]) {
+//        return;
+//    }
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
 //    /*
 //     MARK:TEST
 //     */
 //    user_name = [NSString stringWithFormat:@"%@", TEST_NAME];
 //    pass_word = [NSString stringWithFormat:@"%@",TEST_PASSWORD];
-    [self logInWith:user_name andPassword:pass_word];
-=======
+//    [self logInWith:user_name andPassword:pass_word];
+
 //    if (![pass_word length] || ![user_name length]) {
 //        return;
 //    }
 //    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 //    [self logInWith:user_name andPassword:pass_word];
->>>>>>> map_components
+
 }
 
 - (void)handleTap:(UITapGestureRecognizer *)recorgnizer {
