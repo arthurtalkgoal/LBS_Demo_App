@@ -1,9 +1,9 @@
 //
 //  Beacons+CoreDataProperties.h
-//  LBSOfflineClient
+//  LBSMapComponents
 //
-//  Created by HU Siyan on 3/12/2018.
-//  Copyright © 2018 HU Siyan. All rights reserved.
+//  Created by HU Siyan on 6/3/2019.
+//  Copyright © 2019 HU Siyan. All rights reserved.
 //
 //
 
@@ -17,7 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<Beacons *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *areaId;
+@property (nonatomic) BOOL enabled;
 @property (nullable, nonatomic, copy) NSString *enterThres;
+@property (nullable, nonatomic, copy) NSString *farThres;
+@property (nonatomic) BOOL floorSwitch;
 @property (nullable, nonatomic, copy) NSString *id;
 @property (nullable, nonatomic, copy) NSString *location;
 @property (nullable, nonatomic, copy) NSString *mac;
@@ -25,12 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *minor;
 @property (nullable, nonatomic, copy) NSString *psudoLocation;
 @property (nullable, nonatomic, copy) NSString *relatedPolygon;
+@property (nullable, nonatomic, copy) NSString *relatedRegion;
 @property (nullable, nonatomic, copy) NSString *thresDiff;
 @property (nullable, nonatomic, copy) NSString *uuid;
-@property (nonatomic) BOOL enabled;
-@property (nullable, nonatomic, copy) NSString *farThres;
-@property (nonatomic) BOOL floorSwitch;
-@property (nullable, nonatomic, copy) NSString *relatedRegion;
+@property (nonatomic) int16_t decay;
 
 @end
 
