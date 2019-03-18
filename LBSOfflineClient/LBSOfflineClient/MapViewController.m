@@ -221,23 +221,26 @@
         new_floor.altitude = area.altitude;
         //MARK: add image path
         new_floor.image_path = [[NSBundle mainBundle] pathForResource:new_floor.code ofType:@"jpg"];
+        if (!new_floor.image_path) {
+            new_floor.image_path = [[NSBundle mainBundle] pathForResource:@"texaco-road-m-7f" ofType:@"jpg"];
+        }
         new_floor.scale = 0.5f;
         [temp addObject:new_floor];
     }
-    Areas *exm_area = [[DBHandler instance] fetchObjectForEntity:@"Areas" ForId:@"2"];
-    if (exm_area) {
-        for (int i = 8; i <= 21; i++) {
-            Floor *new_floor = [[Floor alloc]init];
-            new_floor._id = [NSString stringWithFormat:@"%d", i];
-            new_floor.name = [NSString stringWithFormat:@"%dF", i];
-            new_floor.code = [NSString stringWithFormat:@"%dF", i];
-            new_floor.altitude = (float)i;
-            //MARK: add image path
-            new_floor.image_path = [[NSBundle mainBundle] pathForResource:exm_area.level_code ofType:@"jpg"];
-            new_floor.scale = 0.5f;
-            [temp addObject:new_floor];
-        }
-    }
+//    Areas *exm_area = [[DBHandler instance] fetchObjectForEntity:@"Areas" ForId:@"2"];
+//    if (exm_area) {
+//        for (int i = 8; i <= 21; i++) {
+//            Floor *new_floor = [[Floor alloc]init];
+//            new_floor._id = [NSString stringWithFormat:@"%d", i];
+//            new_floor.name = [NSString stringWithFormat:@"%dF", i];
+//            new_floor.code = [NSString stringWithFormat:@"%dF", i];
+//            new_floor.altitude = (float)i;
+//            //MARK: add image path
+//            new_floor.image_path = [[NSBundle mainBundle] pathForResource:exm_area.level_code ofType:@"jpg"];
+//            new_floor.scale = 0.5f;
+//            [temp addObject:new_floor];
+//        }
+//    }
     [self.backView addFloor:temp];
     [self.backView showMapView];
     [self.backView showLevelView];
