@@ -16,8 +16,6 @@
 		0BA9A834219130C70074B947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA9A832219130C70074B947 /* LaunchScreen.storyboard */; };
 		0BA9A837219130C70074B947 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A836219130C70074B947 /* main.m */; };
 		0BA9A84C219130C70074B947 /* LBSOfflineClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A84B219130C70074B947 /* LBSOfflineClientUITests.m */; };
-		B30B460E21F5A1B80056B378 /* LBSOfflineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; };
-		B30B460F21F5A1B80056B378 /* LBSOfflineSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3408F51222FA35400FD8E1A /* texaco-road-m-1f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F42222FA35300FD8E1A /* texaco-road-m-1f.jpg */; };
 		B3408F52222FA35400FD8E1A /* texaco-road-m-2f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F44222FA35300FD8E1A /* texaco-road-m-2f.jpg */; };
 		B3408F53222FA35400FD8E1A /* texaco-road-m-3f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3408F46222FA35300FD8E1A /* texaco-road-m-3f.jpg */; };
@@ -32,6 +30,8 @@
 		B378FC3521C8FF1D00B41F8B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B378FC3321C8FF1D00B41F8B /* AVFoundation.framework */; };
 		B378FC3621C8FF1D00B41F8B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B378FC3421C8FF1D00B41F8B /* AVKit.framework */; };
 		B378FC3921C9009A00B41F8B /* lullaby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B378FC3821C9009A00B41F8B /* lullaby.mp3 */; };
+		B394B99D2244D75400E02862 /* LBSOfflineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; };
+		B394B99E2244D75400E02862 /* LBSOfflineSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B30B460B21F5A1860056B378 /* LBSOfflineSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3A4563821B8C181000C000C /* NWHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A4563721B8C181000C000C /* NWHandler.m */; };
 		B3ED8DBC21C0AC21002BAE6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ED8DBB21C0AC21002BAE6A /* LoginViewController.m */; };
 		DE609E9825E84E824329DC5B /* libPods-LBSOfflineClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61D9AE4E7E8E44876F3A4DE /* libPods-LBSOfflineClient.a */; };
@@ -61,8 +61,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B30B460F21F5A1B80056B378 /* LBSOfflineSDK.framework in Embed Frameworks */,
 				B3408FAD222FC06D00FD8E1A /* LBSMapComponents.framework in Embed Frameworks */,
+				B394B99E2244D75400E02862 /* LBSOfflineSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,8 +122,8 @@
 				B378FC3621C8FF1D00B41F8B /* AVKit.framework in Frameworks */,
 				0B2343C621B43E8000286357 /* libsqlite3.tbd in Frameworks */,
 				0B2343C421B43E7B00286357 /* CoreData.framework in Frameworks */,
+				B394B99D2244D75400E02862 /* LBSOfflineSDK.framework in Frameworks */,
 				DE609E9825E84E824329DC5B /* libPods-LBSOfflineClient.a in Frameworks */,
-				B30B460E21F5A1B80056B378 /* LBSOfflineSDK.framework in Frameworks */,
 				B3408FAC222FC06D00FD8E1A /* LBSMapComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -69,8 +69,8 @@
 - (IBAction)loginSelected:(id)sender {
     
     [self grant_permitted];
-    
-
+    //FDA50693-A4E2-4FB1-AFCF-C6EB07647825_256_19641
+    //FDA50693-A4E2-4FB1-AFCF-C6EB07647825_10001_40024
 //    if (![pass_word length] || ![user_name length]) {
 //        return;
 //    }

@@ -19,7 +19,8 @@ FOUNDATION_EXPORT const unsigned char LBSOfflineSDKVersionString[];
 
 #import "Position.h"
 #import "BeaconData.h"
-#import "Poi.h"
+#import "POI.h"
+#import "Constraint.h"
 #import "LocationEngine.h"
 
 // In this header, you should import all the public headers of your framework using statements like #import <LBSOfflineSDK/PublicHeader.h>

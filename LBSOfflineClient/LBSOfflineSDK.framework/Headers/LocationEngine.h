@@ -35,6 +35,7 @@ typedef enum PositioningTool : NSUInteger {
 - (void)timerInterval:(NSInteger)interval forType:(PositioningTool)toolType;
 - (BOOL)addRefData_Beacons:(NSArray<BeaconData *> *)beacon_db;
 - (void)addRefData_POIs:(NSArray<POI *> *)POIs;
+- (void)addRefData_Constraint:(NSArray<Constraint *> *)CNs;
 
 - (void)start;
 - (void)end;

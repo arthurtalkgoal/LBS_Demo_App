@@ -2,7 +2,7 @@
 //  Pois+CoreDataProperties.h
 //  LBSMapComponents
 //
-//  Created by HU Siyan on 6/3/2019.
+//  Created by HU Siyan on 22/3/2019.
 //  Copyright © 2019 HU Siyan. All rights reserved.
 //
 //
@@ -18,10 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *areaId;
 @property (nullable, nonatomic, copy) NSString *id;
+@property (nullable, nonatomic, copy) NSString *location;
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, copy) NSString *svg_name;
 @property (nullable, nonatomic, copy) NSString *vertices;
-@property (nullable, nonatomic, copy) NSString *location;
+@property (nonatomic) int16_t type;
 
 @end
 

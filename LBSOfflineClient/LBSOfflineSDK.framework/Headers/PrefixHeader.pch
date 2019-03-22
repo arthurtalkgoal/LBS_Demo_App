@@ -15,11 +15,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
 #import "ThreadSafeMutableArray.h"
 
 #import "LocationEngine/LocationData/Position.h"
 #import "LocationEngine/LocationData/BeaconData.h"
 #import "LocationEngine/LocationData/POI.h"
+#import "LocationEngine/LocationData/Constraint.h"
 
 #endif /* PrefixHeader_pch */

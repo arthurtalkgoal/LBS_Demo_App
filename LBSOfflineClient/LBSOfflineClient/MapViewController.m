@@ -227,20 +227,6 @@
         new_floor.scale = 0.5f;
         [temp addObject:new_floor];
     }
-//    Areas *exm_area = [[DBHandler instance] fetchObjectForEntity:@"Areas" ForId:@"2"];
-//    if (exm_area) {
-//        for (int i = 8; i <= 21; i++) {
-//            Floor *new_floor = [[Floor alloc]init];
-//            new_floor._id = [NSString stringWithFormat:@"%d", i];
-//            new_floor.name = [NSString stringWithFormat:@"%dF", i];
-//            new_floor.code = [NSString stringWithFormat:@"%dF", i];
-//            new_floor.altitude = (float)i;
-//            //MARK: add image path
-//            new_floor.image_path = [[NSBundle mainBundle] pathForResource:exm_area.level_code ofType:@"jpg"];
-//            new_floor.scale = 0.5f;
-//            [temp addObject:new_floor];
-//        }
-//    }
     [self.backView addFloor:temp];
     [self.backView showMapView];
     [self.backView showLevelView];
@@ -316,45 +302,29 @@
             poi_data.areaId = poi.areaId;
             poi_data.name = poi.name;
             
-            if (![poi_data.name containsString:@"RM"]) {
-                continue;
-            }
             
             NSMutableArray *temp_s = [NSMutableArray array];
-            NSMutableCharacterSet *sepChars = [NSMutableCharacterSet characterSetWithCharactersInString:@"[], "];
-            NSCharacterSet *nullChars = [NSCharacterSet characterSetWithCharactersInString:@""];
-            [sepChars formUnionWithCharacterSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-            [sepChars formUnionWithCharacterSet:nullChars];
             
-            NSMutableArray *subs = [NSMutableArray arrayWithArray:[poi.vertices componentsSeparatedByCharactersInSet:sepChars]];
-            NSMutableArray *to_delete = [NSMutableArray array];
-            for (NSString *subtest  in subs) {
-                if (subtest.length == 0) {
-                    [to_delete addObject:subtest];
+            if (poi.vertices.length > 2) {
+                
+                if (![poi.vertices containsString:@"\n"]) {
+                    
+                    NSArray *t_v = [self str2NumArrayByRegexp:poi.vertices];
+                    
+                    if (t_v) {
+                        [temp_s addObject:t_v];
+                    }
+                } else {
+                    NSArray *separate_v = [self str2subs:poi.vertices];
+                    for (NSString *v in separate_v) {
+                        NSArray *t_v = [self str2NumArrayByRegexp:v];
+                        if (t_v) {
+                            [temp_s addObject:t_v];
+                        }
+                    }
                 }
             }
-            [subs removeObjectsInArray:to_delete];
             
-            if (!subs) {
-                continue;
-            }
-            if ([subs count] < 2) {
-                continue;
-            }
-            int i = 0;
-            while (i < subs.count - 1) {
-                double x = [[subs objectAtIndex:i] doubleValue];
-                double y = [[subs objectAtIndex:i+1] doubleValue];
-                if (x && y) {
-                    CGPoint pnt = CGPointMake(x, y);
-                    [temp_s addObject:NSStringFromCGPoint(pnt)];
-                }
-                i+=2;
-            }
-            if ([temp_s count]) {
-                poi_data.vertex = [NSArray arrayWithArray:temp_s];
-                poi_data.rect = CGRectNull;
-            }
             [temp0 addObject:poi_data];
         }
         if (temp0) {
@@ -377,6 +347,70 @@
     [self backgroundTrickStop];
     loc_on = NO;
     [[LocationEngine sharedinstance] end];
+}
+
+- (NSArray *)str2subs:(NSString *)str {
+    
+    NSMutableArray *polygons = [NSMutableArray array];
+    
+    NSString *nospaceStr = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *sepChar = @"]\n],\n[\n[";
+    NSArray *polyArrays = [nospaceStr componentsSeparatedByString:sepChar];
+    for (NSString *polygonStr in polyArrays) {
+        NSString *searchedString = polygonStr;
+        NSRange   searchedRange = NSMakeRange(0, [searchedString length]);
+        NSString *pattern = @"([+-]?([0-9]*[.])?[0-9]+),([+-]?([0-9]*[.])?[0-9]+)";
+        NSError  *error = nil;
+        NSMutableArray *matchTexts = [NSMutableArray array];
+        
+        NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern: pattern options:0 error:&error];
+        NSArray* matches = [regex matchesInString:searchedString options:0 range: searchedRange];
+        for (NSTextCheckingResult* match in matches) {
+            NSString* matchText = [searchedString substringWithRange:[match range]];
+            if (!matchText) {
+                continue;
+            }
+            if (![matchText length]) {
+                continue;
+            }
+            [matchTexts addObject:matchText];
+        }
+        if (![matchTexts count]) {
+            continue;
+        }
+        NSString *polygon = [matchTexts componentsJoinedByString:@","];
+        polygon = [NSString stringWithFormat:@"[%@]", polygon];
+        [polygons addObject:polygon];
+    }
+    return polygons;
+}
+
+- (NSArray *)str2NumArrayByRegexp:(NSString *)str {
+    NSString *searchedString = str;
+    NSRange   searchedRange = NSMakeRange(0, [searchedString length]);
+    NSString *pattern = @"[+-]?([0-9]*[.])?[0-9]+";
+    NSError  *error = nil;
+    NSMutableArray *pntArr = [NSMutableArray array];
+    
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern: pattern options:0 error:&error];
+    NSArray* matches = [regex matchesInString:searchedString options:0 range: searchedRange];
+    if ([matches count]%2 != 0) {
+        return nil;
+    }
+    for (int i = 0; i < matches.count - 1; i+=2) {
+        NSTextCheckingResult* matchX  = [matches objectAtIndex:i];
+        NSTextCheckingResult* matchY  = [matches objectAtIndex:i+1];
+        NSString* matchTextX = [searchedString substringWithRange:[matchX range]];
+        NSString* matchTextY = [searchedString substringWithRange:[matchY range]];
+        double x = matchTextX.floatValue;
+        double y = matchTextY.floatValue;
+        CGPoint pnt = CGPointMake(x, y);
+        [pntArr addObject:NSStringFromCGPoint(pnt)];
+    }
+    if ([pntArr count]) {
+        return pntArr;
+    }
+    return nil;
 }
 
 #pragma mark - LBSOfflineClientSDK

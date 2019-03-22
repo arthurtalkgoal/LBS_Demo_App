@@ -16,10 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *areaId;
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSArray *vertex;
-@property (nonatomic, assign) CGRect rect;
 
-- (BOOL)contains:(CGPoint)pnt;
+@property (nonatomic, strong) NSArray *vertex;
+@property (nonatomic, assign) CGPoint tempCentre;
+
+@property (nonatomic, assign) CGRect rect;
+@property (nonatomic, assign) CGPoint center;
+
+- (nullable NSArray *)contains:(CGPoint)pnt;
 
 @end
 
